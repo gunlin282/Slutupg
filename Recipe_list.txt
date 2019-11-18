@@ -1,0 +1,3 @@
+{"carbonara": [{"pasta": 2}, {"bacon": 2}, "laga mat"]}
+{"borsjtj": [{"rödbeta": 100}, {"lök": 200}, "laga mat ffs"]}
+{"köttfärsås": [{"köttfärs": 1000}, {"lök": 200}, {"tomatsås": 200}, "laga mat nu"]}
