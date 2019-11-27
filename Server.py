@@ -18,7 +18,6 @@ def threaded(conn):
         input_output_with_client(data)
 
 
-
 def input_output_with_client(data):
     client_input = pickle.loads(data)
     print(client_input)
@@ -59,7 +58,6 @@ def input_output_with_client(data):
         conn.send(shopping_send)
 
     elif client_input == "quit":
-        conn.close()
         message = "Användare lämnat"
         msg = pickle.dumps(message)
         for client in clients:

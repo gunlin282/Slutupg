@@ -21,7 +21,6 @@ def Main():
 
 
 def thread():
-
     myThread = Thread(target=Main)
     myThread.start()
 
@@ -82,7 +81,6 @@ def call_close(button):
     message = "quit"
     msg = pickle.dumps(message)
     s.send(msg)
-    s.close()
 
 def call_value():
     pass
