@@ -12,5 +12,10 @@ class testing(unittest.TestCase):
         input_output_with_client(input_output)
         self.assertEqual(pickle.loads(input_output), "pasta carbonara")
 
-   def test_server_output(self):
+
+    def test_server_output(self):
+        pass
+
+
+    def test_client_leave(self):
         pass

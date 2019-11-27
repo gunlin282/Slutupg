@@ -58,10 +58,7 @@ def call_to_storage(button):
         storage_pack.append(storage_input)
         storage_send = pickle.dumps(storage_pack)
         s.send(storage_send)
-<<<<<<< HEAD
-=======
 
->>>>>>> testing
 
 
 def call_to_recipe(button):
@@ -71,10 +68,7 @@ def call_to_recipe(button):
         recipe_pack.append(recipe_input)
         recipe_send = pickle.dumps(recipe_pack)
         s.send(recipe_send)
-<<<<<<< HEAD
-=======
 
->>>>>>> testing
 
 
 # har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
