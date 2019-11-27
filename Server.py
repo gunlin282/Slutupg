@@ -12,6 +12,7 @@ def threaded(conn):
             # data received from client
         data = conn.recv(buffer_size)
         if not data:
+            clients.clear()
             print('input complete')
             break
 
