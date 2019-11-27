@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4be419ca-49aa-41c6-b158-e11c55931c13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Storage_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Storage_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.Server">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pantry" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Storage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pantry" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +85,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\gunna\PycharmProjects\Pantry\storage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Server" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.recipe" />
         <item itemvalue="Python.format" />
         <item itemvalue="Python.user_input" />
-        <item itemvalue="Python.Storage" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +198,7 @@
       <workItem from="1574338635654" duration="88000" />
       <workItem from="1574793030545" duration="93000" />
       <workItem from="1574796717766" duration="11000" />
+      <workItem from="1574843691764" duration="730000" />
     </task>
     <servers />
   </component>
@@ -221,6 +224,7 @@
     <SUITE FILE_PATH="coverage/Pantry$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1569751333616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pantry$Recipe.coverage" NAME="Recipe Coverage Results" MODIFIED="1569756544026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pantry$format.coverage" NAME="format Coverage Results" MODIFIED="1570032277085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pantry$Server.coverage" NAME="Server Coverage Results" MODIFIED="1574844354552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pantry$user_input.coverage" NAME="user_input Coverage Results" MODIFIED="1570004400254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pantry$Storage.coverage" NAME="Storage Coverage Results" MODIFIED="1569914502762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pantry$User_input.coverage" NAME="User_input Coverage Results" MODIFIED="1569868375799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

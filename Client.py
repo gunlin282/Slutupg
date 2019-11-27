@@ -20,6 +20,11 @@ def Main():
         output_from_server(data)
 
 
+def threaded():
+    myThread = Thread(target=Main)
+    myThread.start()
+
+
 def output_from_server(data):
     server_output = pickle.loads(data)
     print(server_output)
@@ -53,7 +58,6 @@ def call_to_storage(button):
         storage_pack.append(storage_input)
         storage_send = pickle.dumps(storage_pack)
         s.send(storage_send)
-    app.stop()
 
 
 def call_to_recipe(button):
@@ -63,7 +67,6 @@ def call_to_recipe(button):
         recipe_pack.append(recipe_input)
         recipe_send = pickle.dumps(recipe_pack)
         s.send(recipe_send)
-    app.stop()
 
 
 # har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
@@ -80,7 +83,7 @@ app = gui()
 
 
 def my_gui():
-    app.thread(Main)
+    app.thread(threaded)
     app.setSize(600, 400)
     app.setResizable(canResize=False)
     app.startFrame("LEFT", row=0, column=0, rowspan=0, colspan=0)
@@ -104,4 +107,3 @@ if __name__ == '__main__':
     port = 12345
     s.connect((host, port))
     my_gui()
-
