@@ -58,6 +58,10 @@ def call_to_storage(button):
         storage_pack.append(storage_input)
         storage_send = pickle.dumps(storage_pack)
         s.send(storage_send)
+<<<<<<< HEAD
+=======
+
+>>>>>>> testing
 
 
 def call_to_recipe(button):
@@ -67,6 +71,10 @@ def call_to_recipe(button):
         recipe_pack.append(recipe_input)
         recipe_send = pickle.dumps(recipe_pack)
         s.send(recipe_send)
+<<<<<<< HEAD
+=======
+
+>>>>>>> testing
 
 
 # har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
@@ -75,8 +83,11 @@ def call_dinner_tip(button):
 
 
 # har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
-def call_value(button):
-    pass
+def call_close(button):
+    message = "quit"
+    msg = pickle.dumps(message)
+    s.send(msg)
+    s.close()
 
 
 app = gui()
@@ -95,7 +106,7 @@ def my_gui():
     app.addButton("Lägg till varor", call_to_storage, row=2, colspan=2)
     app.addButton("Lägg till recept", call_to_recipe, row=3, colspan=2)
     app.addButton("Ta bort recept", call_value, row=3, column=2)
-    app.addButton("Ta bort varor", call_value, row=2, column=2)
+    app.addButton("Avsluta", call_close, row=2, column=2)
     app.stopFrame()
     app.go()
 
