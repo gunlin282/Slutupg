@@ -62,6 +62,7 @@ def input_output_with_client(data):
         msg = pickle.dumps(message)
         for client in clients:
             client.send(msg)
+            conn.close()
 
 
 def current_recipe_name():
