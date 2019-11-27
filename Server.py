@@ -20,10 +20,18 @@ def threaded(conn):
             message = "quit"
             msg = pickle.dumps(message)
             conn.send(msg)
+            broadcast_user_left()
             print("user left")
             return False
         else:
             input_output_with_client(data)
+
+
+def broadcast_user_left():
+    message = "User left"
+    msg = pickle.dumps(message)
+    for client in clients:
+        client.send(msg)
 
 
 def input_output_with_client(data):
