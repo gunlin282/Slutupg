@@ -20,6 +20,12 @@ def Main():
         output_from_server(data)
 
 
+def thread():
+
+    myThread = Thread(target=Main)
+    myThread.start()
+
+
 def output_from_server(data):
     server_output = pickle.loads(data)
     print(server_output)
@@ -83,7 +89,7 @@ app = gui()
 
 
 def my_gui():
-    app.thread(Main)
+    app.thread(thread)
     app.setSize(600, 400)
     app.setResizable(canResize=False)
     app.startFrame("LEFT", row=0, column=0, rowspan=0, colspan=0)
