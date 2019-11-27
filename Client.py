@@ -84,6 +84,9 @@ def call_close(button):
     s.send(msg)
     s.close()
 
+def call_value():
+    pass
+
 
 app = gui()
 

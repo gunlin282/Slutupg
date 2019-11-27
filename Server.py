@@ -43,7 +43,6 @@ def input_output_with_client(data):
             for client in clients:
                 client.send(msg)
 
-
     elif client_input == "list_storage":
         storage_list = current_ingredient()
         storage_send = pickle.dumps(storage_list)
@@ -65,8 +64,6 @@ def input_output_with_client(data):
         msg = pickle.dumps(message)
         for client in clients:
             client.send(msg)
-
-
 
 
 def current_recipe_name():
