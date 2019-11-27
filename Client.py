@@ -14,17 +14,19 @@ def Main():
 
         # data received from server
         data = s.recv(buffer_size)
-        if not data:
+        data2 = pickle.loads(data)
+        if len(data) < 1:
             print('output complete')
             break
-        output_from_server(data)
+        elif data2 == "quit":
+            print("connection closed")
+            s.close()
+            return False
+        else:
+            output_from_server(data)
 
 
-<<<<<<< HEAD
-def threaded():
-=======
 def thread():
->>>>>>> testing
     myThread = Thread(target=Main)
     myThread.start()
 
@@ -32,6 +34,7 @@ def thread():
 def output_from_server(data):
     server_output = pickle.loads(data)
     print(server_output)
+
 
 
 def call_storage_list(button):
@@ -73,18 +76,16 @@ def call_to_recipe(button):
         recipe_send = pickle.dumps(recipe_pack)
         s.send(recipe_send)
 
+def call_close(button):
+    message = "quit"
+    msg = pickle.dumps(message)
+    s.send(msg)
+    app.stop()
 
 
 # har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
 def call_dinner_tip(button):
     pass
-
-
-# har inte definerat klart functionerna men vill ha kvar layouten på gui så därav en pass på funtionen
-def call_close(button):
-    message = "quit"
-    msg = pickle.dumps(message)
-    s.send(msg)
 
 def call_value():
     pass
@@ -94,11 +95,9 @@ app = gui()
 
 
 def my_gui():
-<<<<<<< HEAD
-    app.thread(threaded)
-=======
+
+
     app.thread(thread)
->>>>>>> testing
     app.setSize(600, 400)
     app.setResizable(canResize=False)
     app.startFrame("LEFT", row=0, column=0, rowspan=0, colspan=0)
@@ -118,7 +117,7 @@ def my_gui():
 
 if __name__ == '__main__':
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = "127.0.0.1"
+    host = "172.20.201.214"
     port = 12345
     s.connect((host, port))
     my_gui()

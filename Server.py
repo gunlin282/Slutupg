@@ -3,20 +3,27 @@ from threading import Thread
 import json
 import pickle
 
+
 buffer_size = 1024
-clients = []
+clients = {}
 
 def threaded(conn):
     while True:
 
             # data received from client
         data = conn.recv(buffer_size)
-        if not data:
-            clients.clear()
+        data2 = pickle.loads(data)
+        if len(data) < 1:
             print('input complete')
             break
-
-        input_output_with_client(data)
+        elif data2 == "quit":
+            message = "quit"
+            msg = pickle.dumps(message)
+            conn.send(msg)
+            print("user left")
+            return False
+        else:
+            input_output_with_client(data)
 
 
 def input_output_with_client(data):
@@ -58,12 +65,9 @@ def input_output_with_client(data):
         shopping_send = pickle.dumps(shopping_list)
         conn.send(shopping_send)
 
-    elif client_input == "quit":
-        message = "Användare lämnat"
-        msg = pickle.dumps(message)
-        for client in clients:
-            client.send(msg)
-            conn.close()
+
+
+
 
 
 def current_recipe_name():
@@ -92,7 +96,7 @@ def current_shop_list():
 
 
 if __name__ == '__main__':
-    host = "127.0.0.1"
+    host = ""
     port = 12345
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((host, port))
@@ -102,7 +106,8 @@ if __name__ == '__main__':
     print("socket is listening")
     while True:
         conn, addr = s.accept()
-        clients += [conn]
+        clients[conn] = addr
+
 
         print('Connected to :', addr[0], ':', addr[1])
 
