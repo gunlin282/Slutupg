@@ -59,6 +59,15 @@ def input_output_with_client(data):
         shopping_send = pickle.dumps(shopping_list)
         conn.send(shopping_send)
 
+    elif client_input == "quit":
+        conn.close()
+        message = "Användare lämnat"
+        msg = pickle.dumps(message)
+        for client in clients:
+            client.send(msg)
+
+
+
 
 def current_recipe_name():
     my_recipe = []
